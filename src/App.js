@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {CookiesProvider} from 'react-cookie'
 
+
+
 function App() {
   return (
     <CookiesProvider>
@@ -13,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/articles" element={<Home />} />
         <Route path="/" element={<Login />} />
+    
       </Routes>
     </Router>
     </CookiesProvider>

@@ -25,8 +25,10 @@ function Form(props) {
   return (
     <div>
       {props.article ? (
-        <div className='mb-3'>
-            <label htmlFor='title' className='form-label'>Title</label>
+        <div className=' container mb-3'>
+          
+          <div className='card border-0 m-5 shadow p-3'>
+          <label htmlFor='title' className='form-label'>Title</label>
             <input type="text" className='form-control' id='title' placeholder='please enter the title' value={title}  onChange={e => setTitle(e.target.value)}/>
 
             <label htmlFor='title' className='form-label'>Description</label>
@@ -36,6 +38,8 @@ function Form(props) {
             { props.article.id ? <button className='btn btn-success' onClick={updateArticle}>Update Article</button>:
             <button className='btn btn-success' onClick={insertArticle}>Add Article</button>
             }
+          </div>
+            
             
 
 

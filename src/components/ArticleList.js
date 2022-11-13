@@ -15,7 +15,7 @@ function ArticleList(props) {
         
     }
   return (
-    <div>
+    <div className=''>
         {props.articles && props.articles.map(article => {
         return (
           <div key={article.id}>
@@ -23,11 +23,11 @@ function ArticleList(props) {
         <p >{article.description}</p>
 
         <div className='row'>
-            <div className='col-1'>
+            <div className='col-2'>
                 <button className='btn btn-primary' onClick={() =>editBtn(article)}>Update</button>
                 
             </div>
-            <div className='col-1 '>
+            <div className='col-2'>
                 <button onClick={() => deleteBtn(article)} className='btn btn-danger'>Delete</button>
                 
             </div>
