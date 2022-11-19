@@ -7,6 +7,14 @@ import {useCookies} from 'react-cookie'
 import { useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar';
 
+
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+
+
+
+
 function Home() {
    
     
@@ -90,7 +98,13 @@ function Home() {
           
         </div>
         <div className='col-4 text-end'>
-            <button className='btn btn-primary shadow ' onClick={articleForm}>Add Article</button>
+        <Box sx={{ '& > :not(style)': { m: 1 } }}>
+            <Fab color="primary" aria-label="add">
+                <AddIcon onClick={articleForm}/>
+            </Fab>
+            
+        </Box>
+            
         </div>
         <br/>
         <br/>
